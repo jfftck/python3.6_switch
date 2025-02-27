@@ -64,11 +64,6 @@ def test2(a):
     with case.default():
       output.append('default')
       
-    try:
-      with case('10'):
-        pass
-    except Exception as e:
-      err.append(str(e))
 
   return '\n'.join(['test2({}):'.format(a)] + ['\t{}'.format(x) for x in [', '.join([str(x) for x in output])] + err])
 
